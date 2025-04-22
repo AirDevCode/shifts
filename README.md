@@ -67,3 +67,37 @@ Simply open [Lovable](https://lovable.dev/projects/f592be55-d121-4e85-a0f0-a0849
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+
+
+
+# Initialize a new npm project (if not already done)
+npm init -y
+
+# Install core dependencies
+npm install react react-dom react-router-dom vite typescript @vitejs/plugin-react-swc
+
+# Install Tailwind CSS and its peer dependencies
+npm install -D tailwindcss postcss autoprefixer
+
+# Install additional project-specific dependencies
+npm install @reduxjs/toolkit react-redux
+npm install shadcn-ui
+npm install jwt-decode
+npm install @tanstack/react-query
+npm install lucide-react
+npm install tailwindcss-animate
+npm install zod
+npm install react-hook-form @hookform/resolvers
+npm install i18next react-i18next
+npm install date-fns
+
+# Initialize Tailwind CSS configuration
+npx tailwindcss init -p
+
+
+
+npm -v
+11.2.0
+
+node -v
+v20.18.2
