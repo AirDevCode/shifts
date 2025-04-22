@@ -103,13 +103,14 @@ export default class ApiService {
   // Método genérico para hacer peticiones con timeout
   private static async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     try {
-      console.log(`Making ${options?.method || 'GET'} request to ${endpoint}`);
-
+      const token = localStorage.getItem("auth_token") ;
+     
       // Crear la promesa para el fetch
       const fetchPromise = fetch(`${this.BASE_URL}${endpoint}`, {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          'X-Token': token || "",
         },
         ...options,
       });

@@ -1,11 +1,8 @@
-
 import ApiService from "./ApiService";
 import { User } from "../contexts/AuthContext";
 import { jwtDecode } from 'jwt-decode';
 
-
 class AuthService {
-
 
   // Login with email and password
   static async login(email: string, password: string): Promise<{ user: User; token: string }> {
